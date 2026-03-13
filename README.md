@@ -13,7 +13,7 @@ Built with **Python, Streamlit, and Groq LLM APIs**, this project demonstrates h
 Try the AI Tutor here:
 
 🔗 **Live Application:**
-YOUR_DEPLOYED_LINK_HERE
+[YOUR_DEPLOYED_LINK_HERE](https://alok-ai-tutor.streamlit.app/)
 
 ---
 
@@ -126,7 +126,7 @@ README.md
 
 ## 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/ai-tutor.git
+git clone https://github.com/Alok-kumar-priyadarshi/ai-tutor.git
 cd ai-tutor
 
 ---
@@ -197,7 +197,7 @@ Then students can submit answers and receive feedback.
 * Python
 * Streamlit
 * Groq API
-* Llama-3 LLM
+* GPT OSS 120B
 * Prompt Engineering
 * Session State Memory
 
@@ -214,15 +214,3 @@ This project demonstrates:
 * Conversational memory
 * Guardrails for AI safety
 * Deployable AI applications
-
----
-
-# 📌 Future Improvements
-
-Possible upgrades:
-
-* Topic-aware conversation control
-* PDF based learning (RAG)
-* Quiz generator
-* Learning progress tracking
-* Multi-lesson support
