@@ -13,7 +13,7 @@ Built with **Python, Streamlit, and Groq LLM APIs**, this project demonstrates h
 Try the AI Tutor here:
 
 🔗 **Live Application:**
-[YOUR_DEPLOYED_LINK_HERE](https://alok-ai-tutor.streamlit.app/)
+[LINK](https://alok-ai-tutor.streamlit.app/)
 
 ---
 
