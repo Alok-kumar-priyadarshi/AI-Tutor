@@ -1,16 +1,37 @@
-import json
-
-
 def parse_tutor_response(text):
 
-    try:
-        data = json.loads(text)
-        return data
+    sections = {
+        "concept": "",
+        "analogy": "",
+        "example": "",
+        "question": ""
+    }
 
-    except Exception:
-        return {
-            "concept": text,
-            "analogy": "",
-            "example": "",
-            "practice_question": ""
-        }
+    lines = text.split("\n")
+
+    current_section = None
+
+    for line in lines:
+
+        lower = line.lower()
+
+        if "concept explanation" in lower:
+            current_section = "concept"
+            continue
+
+        if "real world analogy" in lower:
+            current_section = "analogy"
+            continue
+
+        if "example" in lower:
+            current_section = "example"
+            continue
+
+        if "practice question" in lower:
+            current_section = "question"
+            continue
+
+        if current_section:
+            sections[current_section] += line + "\n"
+
+    return sections
