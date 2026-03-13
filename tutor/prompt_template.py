@@ -1,27 +1,65 @@
-def build_tutor_prompt(topic, difficulty):
+
+def create_system_prompt(topic, difficulty):
+
+    system_prompt = f"""
+You are an expert AI tutor.
+
+Teach students clearly and patiently.
+
+Topic being studied: {topic}
+Difficulty Level: {difficulty}
+
+When first explaining a concept you must follow this structure:
+
+1. Concept Explanation
+2. Real World Analogy
+3. Example
+4. Practice Question
+
+If the student asks follow-up questions:
+- answer clearly
+- build on previous explanation
+- stay in teacher tone
+"""
+
+    return system_prompt
+
+
+
+def build_answer_evaluation_prompt(question, student_answer):
 
     prompt = f"""
-You are an AI tutor.
+You are an AI tutor evaluating a student's answer.
 
-Teach the topic clearly.
+Practice Question:
+{question}
 
-Topic: {topic}
-Difficulty: {difficulty}
+Student Answer:
+{student_answer}
 
-Return your answer ONLY in valid JSON.
+Evaluate the answer and provide feedback.
 
-Format:
+Your response must follow this structure:
 
-{{
- "concept": "...",
- "analogy": "...",
- "example": "...",
- "practice_question": "..."
-}}
+1. Correctness
+Say whether the answer is correct, partially correct, or incorrect.
 
-Rules:
-- Do not include extra text
-- Do not explain outside JSON
+2. Explanation
+Explain why the answer is correct or incorrect.
+
+3. Correct Answer
+Provide the correct answer if needed.
+
+4. Improvement Tip
+Give advice on how the student can improve.
 """
 
     return prompt
+
+
+
+
+
+
+
+
